@@ -475,7 +475,7 @@ footer ul li {
 
 .menu-container .dish .dish__text {
   padding: 0 0.8em;
-  width: 60%;
+  width: 70%;
   -webkit-transition: width 1s;
   transition: width 1s;
   overflow: hidden;
@@ -669,6 +669,14 @@ footer ul li {
 }
 
 @media only screen and (min-width: 768px) {
+  .menu-heading {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  .heart-desktop {
+    position: absolute;
+    right: 0.85em;
+  }
   .work-flex {
     display: -webkit-box;
     display: -ms-flexbox;

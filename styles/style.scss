@@ -431,7 +431,7 @@ footer {
 
     .dish__text {
       padding: 0 0.8em;
-      width: 60%;
+      width: 70%;
       transition: width 1s;
       overflow: hidden;
       white-space: nowrap;
@@ -586,6 +586,17 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .menu-heading {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  .heart-desktop {
+    position: absolute;
+
+    right: 0.85em;
+  }
+
   .work-flex {
     display: flex;
     align-items: center;
