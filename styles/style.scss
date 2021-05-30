@@ -205,10 +205,13 @@ img {
     margin-bottom: 1.5em;
 
     .r-location {
+      display: block;
       margin: -0.3em 0;
 
       h2 {
-        font-size: 1.3rem;
+        width: 10em;
+
+        font-size: 1rem;
         padding-top: 0.3em;
       }
     }
@@ -271,11 +274,6 @@ footer {
     padding: 0.8em 0;
     z-index: 1;
     margin-top: 1em;
-
-    a {
-      color: rgb(236, 232, 232);
-      text-decoration: none;
-    }
   }
 
   img {
@@ -285,11 +283,23 @@ footer {
     width: 35%;
     height: 100%;
     margin-bottom: 1em;
+    margin-left: 2.3em;
+  }
+
+  ul {
+    margin-bottom: 0.3em;
   }
 
   i {
     width: 0.01em;
     margin-right: 2em;
+  }
+
+  a {
+    color: rgb(236, 232, 232);
+    text-decoration: none;
+    margin-left: 2.5em;
+    margin-bottom: 4.4em;
   }
 
   ul li {
@@ -631,6 +641,7 @@ footer {
 
   .footer-logo-image {
     max-width: 20em;
+    margin-top: 0.8em;
   }
 }
 

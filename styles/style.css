@@ -231,11 +231,13 @@ img {
 }
 
 .restaurants .restaurant-description .r-location {
+  display: block;
   margin: -0.3em 0;
 }
 
 .restaurants .restaurant-description .r-location h2 {
-  font-size: 1.3rem;
+  width: 10em;
+  font-size: 1rem;
   padding-top: 0.3em;
 }
 
@@ -301,11 +303,6 @@ footer .footer-container {
   margin-top: 1em;
 }
 
-footer .footer-container a {
-  color: #ece8e8;
-  text-decoration: none;
-}
-
 footer img {
   color: #ece8e8;
   /* changes the image-text to white */
@@ -314,11 +311,23 @@ footer img {
   width: 35%;
   height: 100%;
   margin-bottom: 1em;
+  margin-left: 2.3em;
+}
+
+footer ul {
+  margin-bottom: 0.3em;
 }
 
 footer i {
   width: 0.01em;
   margin-right: 2em;
+}
+
+footer a {
+  color: #ece8e8;
+  text-decoration: none;
+  margin-left: 2.5em;
+  margin-bottom: 4.4em;
 }
 
 footer ul li {
@@ -722,6 +731,7 @@ footer ul li {
   }
   .footer-logo-image {
     max-width: 20em;
+    margin-top: 0.8em;
   }
 }
 
