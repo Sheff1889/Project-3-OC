@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 $primary: #9356dc;
@@ -73,6 +73,7 @@ img {
 
 .btn:hover {
   filter: brightness(110%);
+  box-shadow: -5px 10px 6px rgba(144, 144, 144, 0.8);
 }
 
 .btn-header {
@@ -94,8 +95,9 @@ img {
     align-items: baseline;
     background-color: $background-gray;
     border-radius: 24px;
-    padding: 0.5em 0 0.5em 2em;
+    padding: 0.8em 0 0.8em 2em;
     margin-bottom: 1em;
+    box-shadow: 5px 5px 5px #dddddd;
   }
 
   .work-slides:hover {
@@ -104,36 +106,38 @@ img {
 
   p {
     padding-left: 2em;
+    font-weight: 600;
   }
 
   .fas {
     color: gray;
+    font-size: 1.1rem;
   }
 
-  .work-slides:hover > p {
+  .work-slides:hover {
+    background-color: rgba($primary, 0.15);
+  }
+
+  .work-slides:hover i {
     color: $primary;
   }
 
-  .work-slides:hover > i {
-    color: $primary;
-  }
-
-  .purple-circle::after {
-    content: "1";
-    background-color: $primary;
+  /* circles  (how it works) */
+  .purple-one,
+  .purple-two,
+  .purple-three {
     position: absolute;
-    display: flex;
-    width: 1.6em;
-    height: 1.6em;
-    border-radius: 1000%;
-    top: 1.6em;
-    left: -0.8em;
-
-    align-items: center;
+    background-color: $primary;
+    color: rgb(236, 232, 232);
     justify-content: center;
-
-    color: white;
-    font-size: 0.8rem;
+    align-items: center;
+    display: flex;
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 1000%;
+    top: 2em;
+    left: -0.6em;
+    font-size: 0.9rem;
   }
 }
 
@@ -141,6 +145,8 @@ img {
 
 .restaurant-anchor {
   position: relative;
+  box-shadow: 5px 5px 5px #dddddd;
+  border-radius: 24px;
 }
 
 .anchor-span {
@@ -167,7 +173,7 @@ img {
 
   img {
     border-radius: 24px 24px 0 0;
-    max-height: 15em;
+    height: 13em;
     width: 100%;
     object-fit: cover;
     object-position: 50% 65%;
@@ -192,18 +198,27 @@ img {
     position: relative;
     display: flex;
     background-color: #fff;
-    margin-top: -1.2em;
     border-radius: 0 0 24px 24px;
+    margin-top: -1.2em;
     line-height: 0.5em;
     padding-left: 1em;
     margin-bottom: 1.5em;
+
+    .r-location {
+      margin: -0.3em 0;
+
+      h2 {
+        font-size: 1.3rem;
+        padding-top: 0.3em;
+      }
+    }
   }
 
   /* header 2 on one line  */
   h3 {
     white-space: nowrap;
     padding-top: 0.6em;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   p {
@@ -226,14 +241,14 @@ img {
   .far {
     position: absolute;
     background-color: #fff;
-    top: 1em;
+    top: 0.6em;
     right: 1em;
     z-index: 100;
   }
 
   .fas {
     position: absolute;
-    top: 1em;
+    top: 0.6em;
     right: 1em;
     color: $primary;
     z-index: 2;
@@ -256,6 +271,11 @@ footer {
     padding: 0.8em 0;
     z-index: 1;
     margin-top: 1em;
+
+    a {
+      color: rgb(236, 232, 232);
+      text-decoration: none;
+    }
   }
 
   img {
@@ -263,6 +283,7 @@ footer {
     /* changes the image-text to white */
     filter: brightness(0) invert(1);
     width: 35%;
+    height: 100%;
     margin-bottom: 1em;
   }
 
@@ -550,25 +571,25 @@ footer {
 .menu-entrees.dish-animation-1 .dish:nth-of-type(3) {
   animation-delay: 0.6s;
 }
-/* .menu-entrees.menu-entrees.dish-animation-1 .dish:nth-child(5) {
+.menu-entrees.dish-animation-1 .dish:nth-of-type(4) {
   animation-delay: 0.8s;
-} */
-.menu-entrees.menu-entrees.dish-animation-2 .dish:nth-of-type(1) {
+}
+.menu-entrees.dish-animation-2 .dish:nth-of-type(1) {
   animation-delay: 1.2s;
 }
-.menu-entrees.menu-entrees.dish-animation-2 .dish:nth-of-type(2) {
+.menu-entrees.dish-animation-2 .dish:nth-of-type(2) {
   animation-delay: 1.4s;
 }
-.menu-entrees.menu-entrees.dish-animation-2 .dish:nth-of-type(3) {
+.menu-entrees.dish-animation-2 .dish:nth-of-type(3) {
   animation-delay: 1.6s;
 }
-.menu-entrees.menu-entrees.dish-animation-3 .dish:nth-of-type(1) {
+.menu-entrees.dish-animation-3 .dish:nth-of-type(1) {
   animation-delay: 2.2s;
 }
-.menu-entrees.menu-entrees.dish-animation-3 .dish:nth-of-type(2) {
+.menu-entrees.dish-animation-3 .dish:nth-of-type(2) {
   animation-delay: 2.4s;
 }
-.menu-entrees.menu-entrees.dish-animation-3 .dish:nth-of-type(3) {
+.menu-entrees.dish-animation-3 .dish:nth-of-type(3) {
   animation-delay: 2.6s;
 }
 
@@ -614,10 +635,29 @@ footer {
 }
 
 @media only screen and (min-width: 950px) {
+  /* grid menus on index.html */
+
+  .restaurant-grid {
+    display: grid;
+    grid-template-areas:
+      "grid-1 grid-2"
+      "grid-3 grid-4";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2em;
+
+    .restaurant-description {
+      margin-top: -1.2em;
+      line-height: 0.5em;
+      padding-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
   .dish-flex {
     display: flex;
-    margin-top: 0.5em;
-    margin-bottom: -1em;
+    /*  margin-top: 0.5em;
+    margin-bottom: -1em; */
     justify-content: space-between;
 
     .dish {
