@@ -122,7 +122,7 @@ img {
     color: $primary;
   }
 
-  /* circles  (how it works) */
+  /* circles  ( at: how it works) */
   .purple-one,
   .purple-two,
   .purple-three {
@@ -253,8 +253,29 @@ img {
     position: absolute;
     top: 0.6em;
     right: 1em;
-    color: $primary;
+    background: -moz-linear-gradient(top, $secondary 0%, $primary 100%);
+    background: -webkit-linear-gradient(top, $secondary 0%, $primary 100%);
+    background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    /* clips to the icon/text  */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     z-index: 2;
+
+    animation: transformer 2s ease-in 0s 2 forwards;
+  }
+
+  @keyframes transformer {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .fas:hover {
   }
 
   .far:hover {

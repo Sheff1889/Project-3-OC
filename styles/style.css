@@ -90,7 +90,7 @@ img {
   width: 90%;
   margin: 0 auto;
   padding: 2em 0;
-  /* circles  (how it works) */
+  /* circles  ( at: how it works) */
 }
 
 .work .work-slides {
@@ -280,8 +280,37 @@ img {
   position: absolute;
   top: 0.6em;
   right: 1em;
-  color: #9356dc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  /* clips to the icon/text  */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   z-index: 2;
+  -webkit-animation: transformer 2s ease-in 0s 2 forwards;
+          animation: transformer 2s ease-in 0s 2 forwards;
+}
+
+@-webkit-keyframes transformer {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes transformer {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .restaurants .far:hover {
