@@ -15,6 +15,106 @@ body {
   /* font-family: "Shrikhand", "cursive"; */
 }
 
+/* loading spinner  */
+
+/* .spinner-1::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 3px solid lightgray;
+  border-top-color: $primary;
+  animation: spinner 0.7s linear infinite;
+}
+
+.spinner-2::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: $primary;
+  border-bottom-color: $secondary;
+  animation: spinner 0.7s ease infinite;
+} */
+
+.loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  animation-name: spinner;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
+}
+
+.spinner-3 {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+
+  border-top: 3px solid $primary;
+  border-right: 3px solid $secondary;
+  border-left: 3px solid $tertiary;
+
+  /* animation: spinner 1s linear 3 both; */
+  /* animation-name: spinner;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+  animation-fill-mode: both;
+  animation-delay: 0.2s; */
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+    background-color: fixed;
+  }
+  to {
+    transform: rotate(360deg);
+    background-color: fixed;
+  }
+
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+    visibility: hidden;
+  }
+
+  /* 100% {
+    opacity: 0;
+    z-index: -10;
+  } */
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -263,7 +363,7 @@ img {
     -webkit-text-fill-color: transparent;
     z-index: 2;
 
-    animation: transformer 2s ease-in 0s 2 forwards;
+    animation: transformer 2s ease-in 0s 10 forwards;
   }
 
   @keyframes transformer {
@@ -483,7 +583,7 @@ footer {
 
     .dish__text {
       padding: 0 0.8em;
-      width: 70%;
+      width: 78%;
       transition: width 1s;
       overflow: hidden;
       white-space: nowrap;
@@ -492,6 +592,7 @@ footer {
       h3 {
         margin-bottom: 0.4em;
         margin-top: 0;
+        /* white-space: pre-wrap; */
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
