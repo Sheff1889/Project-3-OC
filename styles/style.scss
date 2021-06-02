@@ -56,7 +56,7 @@ body {
   top: 0px;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
 
@@ -187,17 +187,17 @@ img {
 .work {
   width: 90%;
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 2em 0 3em 0;
 
   .work-slides {
     position: relative;
     display: flex;
     align-items: baseline;
     background-color: $background-gray;
-    border-radius: 24px;
-    padding: 0.8em 0 0.8em 2em;
-    margin-bottom: 1em;
-    box-shadow: 5px 5px 5px #dddddd;
+    border-radius: 18px;
+    padding: 0.6em 0 0.6em 2em;
+    margin-bottom: 1.4em;
+    box-shadow: 0px 5px 10px 5px #e4e3e3;
   }
 
   .work-slides:hover {
@@ -207,6 +207,7 @@ img {
   p {
     padding-left: 2em;
     font-weight: 600;
+    font-size: 1.05rem;
   }
 
   .fas {
@@ -246,7 +247,7 @@ img {
 .restaurant-anchor {
   position: relative;
   box-shadow: 5px 5px 5px #dddddd;
-  border-radius: 24px;
+  border-radius: 16px;
 }
 
 .anchor-span {
@@ -265,15 +266,22 @@ img {
   .restaurant-backage {
     width: 90%;
     margin: 0 auto;
+
+    h1 {
+      margin-bottom: 1.2em;
+    }
   }
 
-  .restautant-image-container {
+  .restaurant-image-container {
     position: relative;
+    width: 100%;
+    max-height: 16em;
+    margin-top: -0.4em;
   }
 
   img {
-    border-radius: 24px 24px 0 0;
-    height: 13em;
+    border-radius: 16px 16px 0 0;
+    height: 12em;
     width: 100%;
     object-fit: cover;
     object-position: 50% 65%;
@@ -298,7 +306,7 @@ img {
     position: relative;
     display: flex;
     background-color: #fff;
-    border-radius: 0 0 24px 24px;
+    border-radius: 0 0 16px 16px;
     margin-top: -1.2em;
     line-height: 0.5em;
     padding-left: 1em;
@@ -306,13 +314,14 @@ img {
 
     .r-location {
       display: block;
-      margin: -0.3em 0;
+      padding-top: 0.4em;
+      /* margin: -0.3em 0; */
 
       h2 {
         width: 10em;
 
-        font-size: 1rem;
-        padding-top: 0.3em;
+        font-size: 1.1rem;
+        padding-top: 0.1em;
       }
     }
   }
@@ -336,7 +345,7 @@ img {
 
   i {
     position: absolute;
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: gray;
     cursor: pointer;
   }
@@ -344,14 +353,14 @@ img {
   .far {
     position: absolute;
     background-color: #fff;
-    top: 0.6em;
+    top: 0.9em;
     right: 1em;
     z-index: 100;
   }
 
   .fas {
     position: absolute;
-    top: 0.6em;
+    top: 0.9em;
     right: 1em;
     background: -moz-linear-gradient(top, $secondary 0%, $primary 100%);
     background: -webkit-linear-gradient(top, $secondary 0%, $primary 100%);
@@ -363,20 +372,20 @@ img {
     -webkit-text-fill-color: transparent;
     z-index: 2;
 
-    animation: transformer 2s ease-in 0s 10 forwards;
+    animation: transformer 2s ease-in 0s 2 both;
   }
 
   @keyframes transformer {
-    from {
+    0% {
       transform: scale(0);
     }
-    to {
+    100% {
       transform: scale(1);
     }
   }
 
-  .fas:hover {
-  }
+  /* .fas:hover {
+  } */
 
   .far:hover {
     color: transparent;
@@ -387,6 +396,7 @@ img {
 footer {
   background-color: rgb(82, 76, 76);
   margin-top: -1.4em;
+  padding-bottom: 1em;
 
   .footer-container {
     color: rgb(236, 232, 232);
@@ -401,8 +411,10 @@ footer {
     color: rgb(236, 232, 232);
     /* changes the image-text to white */
     filter: brightness(0) invert(1);
-    width: 35%;
+    width: 30%;
     height: 100%;
+    padding-top: 0.3em;
+    margin-top: 0.5em;
     margin-bottom: 1em;
     margin-left: 2.3em;
   }
@@ -441,6 +453,7 @@ footer {
   img {
     width: 55%;
     max-height: 4em;
+
     object-fit: contain;
   }
 
@@ -451,7 +464,8 @@ footer {
 }
 
 .image-restaurant {
-  max-height: 70vh;
+  max-height: 23em;
+  min-height: 15em;
   width: 100%;
   object-fit: cover;
 }
