@@ -169,6 +169,7 @@ img {
   color: white;
   font-size: 1rem;
   box-shadow: -5px 10px 6px rgba(144, 144, 144, 0.2);
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -473,19 +474,23 @@ footer {
 .menu-container {
   position: relative;
   background-color: $background-gray;
-  padding: 1.5em;
-  margin-top: -3em;
-  border-radius: 24px 24px 0 0;
+  padding: 1em;
+  margin-top: -2em;
+  border-radius: 32px 32px 0 0;
   z-index: 0;
 
   .menu-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: -2em;
+
+    margin-bottom: -1.6em;
 
     h2 {
       font-family: "Shrikhand", sans-serif;
+      font-size: 1.75rem;
+      white-space: nowrap;
+      z-index: 10;
     }
 
     i {
@@ -497,13 +502,14 @@ footer {
     .far {
       background-color: $background-gray;
       position: absolute;
-      right: 0;
-      right: 0.85em;
+      right: 1em;
       z-index: 3;
     }
 
     .fas {
       color: $primary;
+      position: absolute;
+      right: 1em;
       z-index: 2;
     }
 
@@ -756,12 +762,20 @@ footer {
   .menu-heading {
     width: 50%;
     font-size: 1.5rem;
+
+    /* .far {
+      background-color: $background-gray;
+      position: absolute;
+      right: 0;
+      right: 0.85em;
+      z-index: 3;
+    } */
   }
 
   .heart-desktop {
     position: absolute;
 
-    right: 0.85em;
+    right: 0.55em;
   }
 
   .work-flex {
