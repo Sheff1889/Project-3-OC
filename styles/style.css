@@ -9,39 +9,7 @@ body {
   /* font-family: "Shrikhand", "cursive"; */
 }
 
-/* loading spinner  */
-/* .spinner-1::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 60px;
-  width: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
-  border: 3px solid lightgray;
-  border-top-color: $primary;
-  animation: spinner 0.7s linear infinite;
-}
-
-.spinner-2::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 60px;
-  width: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-top-color: $primary;
-  border-bottom-color: $secondary;
-  animation: spinner 0.7s ease infinite;
-} */
+/*  loading spinner + background loading */
 .loading {
   position: fixed;
   left: 0px;
@@ -51,16 +19,46 @@ body {
   z-index: 100;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
-  -webkit-animation-name: spinner;
-          animation-name: spinner;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  z-index: 1;
+}
+
+.background-loading {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation-name: back-spinner;
+          animation-name: back-spinner;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes back-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+    visibility: hidden;
+  }
+}
+
+@keyframes back-spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+    visibility: hidden;
+  }
 }
 
 .spinner-3 {
@@ -75,27 +73,30 @@ body {
   margin-top: -30px;
   margin-left: -30px;
   border-radius: 50%;
+  z-index: 100;
   border-top: 3px solid #9356dc;
   border-right: 3px solid #ff79da;
   border-left: 3px solid #99e2d0;
-  /* animation: spinner 1s linear 3 both; */
-  /* animation-name: spinner;
-  animation-duration: 1s;
-  animation-iteration-count: 3;
-  animation-fill-mode: both;
-  animation-delay: 0.2s; */
+  -webkit-animation-name: spinner;
+          animation-name: spinner;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
-    background-color: fixed;
   }
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    background-color: fixed;
   }
   from {
     opacity: 1;
@@ -104,22 +105,16 @@ body {
     opacity: 0.8;
     visibility: hidden;
   }
-  /* 100% {
-    opacity: 0;
-    z-index: -10;
-  } */
 }
 
 @keyframes spinner {
   from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
-    background-color: fixed;
   }
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-    background-color: fixed;
   }
   from {
     opacity: 1;
@@ -128,12 +123,9 @@ body {
     opacity: 0.8;
     visibility: hidden;
   }
-  /* 100% {
-    opacity: 0;
-    z-index: -10;
-  } */
 }
 
+/* header restaurant description + logo */
 img {
   max-width: 100%;
   display: block;
@@ -171,9 +163,6 @@ img {
 .header-sub-section {
   margin: 0 auto;
   padding: 2em;
-  /* span {
-    display: block;
-  } */
 }
 
 .header-sub-section h2 {
@@ -183,6 +172,11 @@ img {
 
 .header-sub-section p {
   text-align: center;
+}
+
+.header-sub-section a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .btn {
@@ -216,7 +210,7 @@ img {
   width: 90%;
   margin: 0 auto;
   padding: 2em 0 3em 0;
-  /* circles  ( at: how it works) */
+  /* -----circles  ( at: how it works)------ */
 }
 
 .work .work-slides {
@@ -281,7 +275,7 @@ img {
   font-size: 0.9rem;
 }
 
-/* Restaurants */
+/*------- Restaurants ------*/
 .restaurant-anchor {
   position: relative;
   -webkit-box-shadow: 5px 5px 5px #dddddd;
@@ -301,9 +295,7 @@ img {
 .restaurants {
   background-color: #ecebeb;
   padding: 2em 0 3em 0;
-  /* header 2 on one line  */
-  /* .fas:hover {
-  } */
+  /* ------header 2 on one line ------ */
 }
 
 .restaurants .restaurant-backage {
@@ -424,8 +416,11 @@ img {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 2;
-  -webkit-animation: transformer 2s ease-in 0s 2 both;
-          animation: transformer 2s ease-in 0s 2 both;
+  /* animation-play-state: paused; */
+  -webkit-animation: transformer 2s ease-in 0s both;
+          animation: transformer 2s ease-in 0s both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes transformer {
@@ -436,6 +431,7 @@ img {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    /*  animation-play-state: paused; */
   }
 }
 
@@ -447,7 +443,13 @@ img {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+    /*  animation-play-state: paused; */
   }
+}
+
+.restaurants .fas:hover {
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .restaurants .far:hover {
@@ -455,6 +457,7 @@ img {
   z-index: -3;
 }
 
+/* ------ footer ------ */
 footer {
   background-color: #524c4c;
   margin-top: -1.4em;
@@ -504,7 +507,8 @@ footer ul li {
   line-height: 1.8em;
 }
 
-/* Menu page header (logo + arrow ) */
+/* ---------------------------------Menu Pages ------------------------------- */
+/* ------Menu page header (logo + arrow ) ------*/
 .ohm-site-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -544,54 +548,7 @@ footer ul li {
   margin-top: -2em;
   border-radius: 32px 32px 0 0;
   z-index: 0;
-  /* menu start  */
-  /* .dish {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    box-shadow: -5px 10px 6px rgba(144, 144, 144, 0.2);
-    border-radius: 16px;
-    margin-top: 1em;
-    justify-content: space-between;
-    overflow: hidden;
-
-    .dish__text {
-      padding: 0 0.8em;
-      width: 60%;
-      transition: width 1s;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-      h3 {
-        margin-bottom: 2em;
-        margin-top: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-
-      p {
-        margin: 0;
-        color: $color-text;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-    }
-
-    .dish__price {
-      position: absolute;
-      font-size: 3rem;
-      font-weight: bold;
-      padding: 2em 0.8em 0 0;
-      right: 0;
-      transition: 1s;
-      transform: translateX(65px);
-    }
-  }
- */
+  /* ------menu start ------ */
 }
 
 .menu-container .menu-heading {
@@ -737,7 +694,7 @@ footer ul li {
   top: 0;
 }
 
-.menu-container .dish .dish__check__icon {
+.menu-container .dish .dish__check .dish__check__icon {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition-duration: 700ms;
@@ -917,7 +874,7 @@ footer ul li {
   }
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 1025px) {
   /* grid menus on index.html */
   .restaurant-grid {
     display: -ms-grid;
