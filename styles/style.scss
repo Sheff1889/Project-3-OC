@@ -94,41 +94,52 @@ body {
 
 /* header restaurant description + logo */
 
-img {
-  max-width: 100%;
-  display: block;
+.header-image-container {
+  img {
+    max-width: 100%;
+    display: block;
+    padding-top: 1.2em;
+  }
 }
 
 .logo {
   margin: 0 auto;
-  padding: 1em 0;
-  width: 40%;
+  padding: 1.4em 0 0.6em 0;
+  width: 45%;
+  height: 1.9em;
 }
 
 .main-header-section {
   background-color: #f8f4f4;
+  padding-bottom: 0.4em;
 }
 
 .header-location {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $background-gray;
-  border-top: 2px solid rgb(195, 195, 195);
+  background-color: rgb(234, 234, 234);
+  background: linear-gradient(180deg, #d4d3d3 0%, rgb(234, 234, 234) 10%);
 
   i {
-    margin-right: 2em;
+    margin-left: 2em;
+    margin-right: 1em;
     color: rgb(100, 98, 98);
+  }
+
+  p {
+    margin-right: 2em;
   }
 }
 
 .header-sub-section {
   margin: 0 auto;
-  padding: 2em;
+  padding: 1em 0 2.3em 0;
 
   h2 {
     text-align: center;
     font-weight: bolder;
+    margin-bottom: 1.7em;
   }
 
   p {
@@ -168,21 +179,25 @@ img {
 .work {
   width: 90%;
   margin: 0 auto;
-  padding: 2em 0 3em 0;
+  padding: 1.4em 0 2.65em 0;
+
+  h1 {
+    padding-bottom: 0.3em;
+  }
 
   .work-slides {
     position: relative;
     display: flex;
     align-items: baseline;
-    background-color: $background-gray;
+    background-color: rgb(246, 246, 246);
     border-radius: 18px;
-    padding: 0.6em 0 0.6em 2em;
-    margin-bottom: 1.4em;
-    box-shadow: 0px 5px 10px 5px #e4e3e3;
+    padding: 0.6em 0 0.55em 2em;
+    margin-bottom: 1.7em;
+    box-shadow: 0px 5px 8px 5px #f0eeee;
   }
 
   .work-slides:hover {
-    background-color: rgba(233, 210, 214, 0.6);
+    background-color: rgba(246, 246, 246, 0.6);
   }
 
   p {
@@ -193,11 +208,11 @@ img {
 
   .fas {
     color: gray;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .work-slides:hover {
-    background-color: rgba($primary, 0.15);
+    background-color: rgba($primary, 0.12);
   }
 
   .work-slides:hover i {
@@ -215,10 +230,10 @@ img {
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 1000%;
-    top: 2em;
+    top: 1.8em;
     left: -0.6em;
     font-size: 0.9rem;
   }
@@ -230,6 +245,8 @@ img {
   position: relative;
   box-shadow: 5px 5px 5px #dddddd;
   border-radius: 16px;
+
+  margin-bottom: 1.65em;
 }
 
 .anchor-span {
@@ -242,7 +259,7 @@ img {
 }
 
 .restaurants {
-  background-color: $background-gray;
+  background-color: rgb(246, 246, 246);
   padding: 2em 0 3em 0;
 
   .restaurant-backage {
@@ -250,15 +267,16 @@ img {
     margin: 0 auto;
 
     h1 {
-      margin-bottom: 1.2em;
+      margin-bottom: 1.05em;
     }
   }
 
   .restaurant-image-container {
     position: relative;
     width: 100%;
-    max-height: 16em;
+    max-height: 14em;
     margin-top: -0.4em;
+    margin-bottom: -1.7em;
   }
 
   img {
@@ -273,8 +291,8 @@ img {
     content: "New";
     position: absolute;
     display: flex;
-    width: 5.5em;
-    height: 2em;
+    width: 5.2em;
+    height: 1.9em;
     align-items: center;
     justify-content: center;
     background-color: $tertiary;
@@ -282,6 +300,7 @@ img {
     top: 1em;
     right: 1em;
     z-index: 10;
+    font-size: 0.9rem;
   }
 
   .restaurant-description {
@@ -292,7 +311,7 @@ img {
     margin-top: -1.2em;
     line-height: 0.5em;
     padding-left: 1em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.6em;
 
     .r-location {
       display: block;
@@ -304,6 +323,10 @@ img {
 
         font-size: 1.1rem;
         padding-top: 0.1em;
+      }
+
+      p {
+        margin-bottom: 0.7em;
       }
     }
   }
@@ -324,6 +347,10 @@ img {
     display: flex;
     align-items: center;
     margin-left: 14em;
+
+    .fa-heart {
+      font-size: 1.5em;
+    }
   }
 
   i {
@@ -385,14 +412,14 @@ img {
 
 footer {
   background-color: rgb(82, 76, 76);
-  margin-top: -1.4em;
+  margin-top: -1.75em;
   padding-bottom: 1em;
 
   .footer-container {
     color: rgb(236, 232, 232);
     width: 90%;
     margin: 0 auto;
-    padding: 0.8em 0;
+    padding: 0.8em 0 1em 0;
     z-index: 1;
     margin-top: 1em;
   }
@@ -404,8 +431,8 @@ footer {
     width: 30%;
     height: 100%;
     padding-top: 0.3em;
-    margin-top: 0.5em;
-    margin-bottom: 1em;
+    margin-top: 0.4em;
+    margin-bottom: -0.2em;
     margin-left: 2.3em;
   }
 
@@ -416,6 +443,7 @@ footer {
   i {
     width: 0.01em;
     margin-right: 2em;
+    font-size: 0.8rem;
   }
 
   a {
@@ -439,12 +467,12 @@ footer {
   display: flex;
   width: 80%;
   margin: 0 auto;
-  margin-top: 0.5em;
+  margin: -1em 0;
   align-items: center;
 
   img {
     width: 55%;
-    max-height: 4em;
+    height: 4em;
 
     object-fit: contain;
   }
@@ -452,6 +480,7 @@ footer {
   .fas {
     color: black;
     font-size: 1.3rem;
+    margin-left: 1.5em;
   }
 }
 
@@ -474,8 +503,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin-bottom: -1.6em;
+    margin-top: -0.7em;
+    margin-bottom: -1.5em;
 
     h2 {
       font-family: "Shrikhand", sans-serif;
@@ -519,6 +548,7 @@ footer {
     .sub-menu {
       position: relative;
       display: inline-block;
+      margin-bottom: 0.5em;
     }
 
     .sub-menu::after {
@@ -526,10 +556,14 @@ footer {
       position: absolute;
       width: 50%;
       border-bottom: 3px solid $tertiary;
-      bottom: -0.2em;
+      bottom: -0.4em;
       left: 0em;
       z-index: 10;
     }
+  }
+
+  .dish-flex {
+    margin-bottom: 2.5em;
   }
 
   .dish {
@@ -539,8 +573,8 @@ footer {
     flex-direction: row;
     box-shadow: -5px 10px 6px rgba(144, 144, 144, 0.2);
     border-radius: 16px;
-    margin-top: 1em;
-    padding: 0.8em 0 0.8em 0.2em;
+    margin-top: 0.8em;
+    padding: 0.63em 0 0.63em 0.2em;
     cursor: pointer;
     justify-content: space-between;
     overflow: hidden;
@@ -695,9 +729,9 @@ footer {
   button {
     display: block;
     margin: auto;
-    margin-top: 4em;
+    margin-top: 3.2em;
     margin-bottom: 3em;
-    padding: 0.8em 4em;
+    padding: 1em 4.6em;
     cursor: pointer;
   }
 }
@@ -716,7 +750,7 @@ footer {
     } */
   }
 
-  .heart-desktop {
+  /* .heart-desktop {
     position: absolute;
 
     right: 0.55em;
@@ -731,7 +765,7 @@ footer {
       width: 25%;
       margin: 1em;
     }
-  }
+  } */
 
   .footer-logo-image {
     max-width: 20em;
@@ -759,6 +793,20 @@ footer {
     }
   }
 
+  /* .dish-flex {
+    display: flex;
+    /*  margin-top: 0.5em;
+    margin-bottom: -1em; 
+    justify-content: space-between;
+
+    .dish {
+      width: 33%;
+      margin: 1em;
+    }
+  } */
+}
+
+@media only screen and (min-width: 1350px) {
   .dish-flex {
     display: flex;
     /*  margin-top: 0.5em;
@@ -767,6 +815,23 @@ footer {
 
     .dish {
       width: 33%;
+      margin: 1em;
+    }
+  }
+
+  .heart-desktop {
+    position: absolute;
+
+    right: 0.55em;
+  }
+
+  .work-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .work-slides {
+      width: 25%;
       margin: 1em;
     }
   }
